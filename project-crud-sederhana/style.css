@@ -1,0 +1,45 @@
+* {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.kotak {
+    border: 1px solid black;
+    width: 600px;
+    height: 540px;
+    margin: auto;
+    margin-top: 10px;
+}
+.kotak2 {
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.red {
+    background-color: red;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
+table {
+    margin: auto;
+}
+input {
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+select {
+    width: 230px;
+    height: 30px;   
+}
+button {
+    width: 375px;
+    height: 40px;
+}
+.btn1:hover {
+    background-color: #fff;
+    border-color: blue;
+    color: blue;
+}
