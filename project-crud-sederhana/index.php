@@ -20,6 +20,11 @@
                 ";
         }
     }
+
+
+    
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +43,7 @@
         <form action="" method="post">
             <table cellpadding="12" cellspacing="0" >
                 <tr>
-                    <td> <label for="kode">Kode Produk</label> </td>
+                    <td> <label for="kode">Kode Produk</label> </td> 
                     <td><input type="text" name="kode" id="kode" class="" required></td>
                 </tr>
                 <tr>
@@ -114,7 +119,7 @@
                 }
                 ?>
                 <td> <img src="<?= $product["url"]; ?>" alt="Gambar" width="100px" height="100px" class="img"> </td>
-                <td><a href="hapus.php?id=<?= $product["id"]; ?>">Delete</a></td>
+                <td><a href="hapus.php?id=<?= $product["id"]; ?>">Delete</a> | <a href="ubah.php?id=<?= $product["id"]; ?>">Edit</a></td>
             </tr>
             <?php $i++ ?>
             <?php endforeach; ?>
