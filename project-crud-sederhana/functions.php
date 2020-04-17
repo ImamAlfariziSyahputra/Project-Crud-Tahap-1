@@ -14,16 +14,35 @@
     function tambah($data) {
         global $conn;
         
-        $kode = $_POST["kode"];
-        $nama = $_POST["nama"];
-        $harga = $_POST["harga"];
-        $satuan = $_POST["satuan"];
-        $kategori = $_POST["kategori"];
-        $gambar = $_POST["url"];
-        $stok = $_POST["stok"];
+        $kode = $data["kode"];
+        $nama = $data["nama"];
+        $harga = $data["harga"];
+        $satuan = $data["satuan"];
+        $kategori = $data["kategori"];
+        $gambar = $data["url"];
+        $stok = $data["stok"];
 
         $query = "INSERT INTO `produk` (`id`, `kode`, `nama`, `harga`, `satuan`, `kategori`, `url`, `stok`)
                 VALUES ('', '$kode', '$nama', '$harga', '$satuan', '$kategori', '$gambar', '$stok')";
+
+        mysqli_query($conn, $query);
+
+        return mysqli_affected_rows($conn);
+    }
+
+    function edit($data) {
+        global $conn;
+
+        $id = $data["id"];
+        $kode = $data["kode"];
+        $nama = $data["nama"];
+        $harga = $data["harga"];
+        $satuan = $data["satuan"];
+        $kategori = $data["kategori"];
+        $gambar = $data["url"];
+        $stok = $data["stok"];
+
+        $query = "UPDATE `produk` SET `kode` = '$kode', `nama` = '$nama', `harga` = '$harga', `satuan` = '$satuan', `kategori` = '$kategori', `url` = '$gambar', `stok` = '$stok' WHERE `produk`.`id` = $id";
 
         mysqli_query($conn, $query);
 
